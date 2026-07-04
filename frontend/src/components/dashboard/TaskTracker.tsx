@@ -1,4 +1,3 @@
-import React from 'react';
 import { ListTodo, ShieldAlert } from 'lucide-react';
 
 export function TaskTracker() {

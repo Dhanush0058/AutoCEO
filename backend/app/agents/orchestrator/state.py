@@ -4,7 +4,8 @@ import operator
 
 class AgentState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], operator.add]
+    goal: str
+    plan: dict
     next_agent: str
-    plan: str
-    requires_approval: bool
+    pending_approval: dict | None
     synthesis: str

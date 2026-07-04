@@ -1,5 +1,4 @@
-import React from 'react';
-import { Plus, MessageSquare, FolderKanban, Component, Settings, Code, Users, PenTool, Download } from 'lucide-react';
+import { Plus, MessageSquare, FolderKanban, Component, Settings, Code, Users, PenTool } from 'lucide-react';
 
 export function Sidebar() {
   return (

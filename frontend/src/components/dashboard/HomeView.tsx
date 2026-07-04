@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Mic, AudioLines, Code, Edit3, GraduationCap, Coffee, Lightbulb } from 'lucide-react';
+import { Plus, Mic, AudioLines, Code, Edit3, Coffee, Lightbulb } from 'lucide-react';
 
 interface HomeViewProps {
   onSendMessage: (msg: string) => void;
@@ -61,25 +61,29 @@ export function HomeView({ onSendMessage, isLoading }: HomeViewProps) {
 
         <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
           <button 
-            onClick={() => { setInput("What's our current runway?"); handleSubmit(new Event('submit') as any); }}
+            type="button"
+            onClick={() => onSendMessage("What's our current runway?")}
             className="flex items-center gap-2 px-4 py-2 bg-[#2f2f2f] hover:bg-[#404040] border border-[#404040] rounded-full text-sm text-[#ececec] transition-colors"
           >
             <Coffee className="w-4 h-4" /> Check Runway
           </button>
           <button 
-            onClick={() => { setInput("Draft a JD for a Senior Backend Engineer"); handleSubmit(new Event('submit') as any); }}
+            type="button"
+            onClick={() => onSendMessage("Draft a JD for a Senior Backend Engineer")}
             className="flex items-center gap-2 px-4 py-2 bg-[#2f2f2f] hover:bg-[#404040] border border-[#404040] rounded-full text-sm text-[#ececec] transition-colors"
           >
             <Edit3 className="w-4 h-4" /> Draft Job Description
           </button>
           <button 
-            onClick={() => { setInput("Generate a standard NDA for a contractor"); handleSubmit(new Event('submit') as any); }}
+            type="button"
+            onClick={() => onSendMessage("Generate a standard NDA for a contractor")}
             className="flex items-center gap-2 px-4 py-2 bg-[#2f2f2f] hover:bg-[#404040] border border-[#404040] rounded-full text-sm text-[#ececec] transition-colors"
           >
             <Code className="w-4 h-4" /> Generate Contract
           </button>
           <button 
-            onClick={() => { setInput("Analyze top 3 competitors in our space"); handleSubmit(new Event('submit') as any); }}
+            type="button"
+            onClick={() => onSendMessage("Analyze top 3 competitors in our space")}
             className="flex items-center gap-2 px-4 py-2 bg-[#2f2f2f] hover:bg-[#404040] border border-[#404040] rounded-full text-sm text-[#ececec] transition-colors"
           >
             <Lightbulb className="w-4 h-4" /> Market Analysis

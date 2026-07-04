@@ -1,4 +1,3 @@
-import React from 'react';
 import { DollarSign, TrendingDown } from 'lucide-react';
 
 export function FinancialWidget() {
